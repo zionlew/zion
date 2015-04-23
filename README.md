@@ -4,4 +4,7 @@
 这是一个JavaWeb项目
 环境:  java version "1.7.0_71"
        开发jar包请访问:http://pan.baidu.com/s/1bnjih4r
+
+
+1.添加Struts2的Jar包
        
