@@ -21,4 +21,17 @@
     struts2-core-2.3.20.jar
     xwork-core-2.3.20.jar
 
+在web.xml中添加下面的信息
+    <!-- 添加Struts2的Filter文件 -->
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
 
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    
+    

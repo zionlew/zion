@@ -10,7 +10,7 @@
 
     <package name="default" namespace="/" extends="struts-default">
 
-        <default-action-ref name="index" />
+        <!-- <default-action-ref name="index" /> -->
 
         <!--  全局错误页
         <global-results>
@@ -20,8 +20,9 @@
             <exception-mapping exception="java.lang.Exception" result="error"/>
         </global-exception-mappings>-->
 
-        <action name="index">
-            <result>/index.jsp</result>            
+        <action name="checkLogin" class="com.zion.ssh.demo.CheckLogin">
+            <result name="success">/welcome.jsp</result>        
+            <result name="error">/error.jsp</result>    
         </action>
     </package>
 
