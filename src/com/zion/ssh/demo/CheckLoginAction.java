@@ -22,7 +22,7 @@ public class CheckLoginAction extends ActionSupport {
 
         
         // 用户名和密码同时为空,跳到错误页
-        if (username.endsWith("") && password.endsWith("") ) {
+        if (username.equals("") && password.equals("") ) {
             return ERROR;
         } else {
             return SUCCESS;
