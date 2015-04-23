@@ -20,7 +20,7 @@
             <exception-mapping exception="java.lang.Exception" result="error"/>
         </global-exception-mappings>-->
 
-        <action name="checkLogin" class="com.zion.ssh.demo.CheckLogin">
+        <action name="checkLogin" class="com.zion.ssh.demo.CheckLoginAction">
             <result name="success">/welcome.jsp</result>        
             <result name="error">/error.jsp</result>    
         </action>

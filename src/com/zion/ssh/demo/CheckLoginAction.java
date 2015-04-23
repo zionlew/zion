@@ -9,7 +9,7 @@ package com.zion.ssh.demo;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class CheckLogin extends ActionSupport {
+public class CheckLoginAction extends ActionSupport {
 
     private String username;
     private String password;
@@ -22,10 +22,8 @@ public class CheckLogin extends ActionSupport {
 
         //用户名和密码同时为空,跳到错误页
         if (username == "" && password == "") {
-            System.out.println("Failed");
             return ERROR;
         } else {
-            System.out.println("ok");
             return SUCCESS;
         }
     }
