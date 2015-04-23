@@ -19,9 +19,9 @@ public class CheckLoginAction extends ActionSupport {
 
         System.out.println("username:[" + username + "]");
         System.out.println("password:[" + password + "]");
-
+        
         // 用户名和密码同时为空,跳到错误页
-        if (username == "" && password == "") {
+        if (username.endsWith("") && password.endsWith("") ) {
             System.out.println("error");
             return ERROR;
         } else {
