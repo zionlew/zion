@@ -4,13 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+    <!-- 如果只使用depends-on,property不指定的话,类则没有加载进去 -->
+	<bean id="person" class="com.zion.ssh.demo.Person" depends-on="book">
+	     <property name="name" value="zhangsan"></property>
+	     <property name="book" ref="book"></property>
+	</bean>
     <bean id="book" class="com.zion.ssh.demo.Book">
         <property name="name" value="java" />
     </bean>
     
-	<bean id="person" class="com.zion.ssh.demo.Person" >
-	     <property name="name" value="zhangsan"></property>
-	     <property name="book" ref="book" ></property>
-	</bean>
-
 </beans>
