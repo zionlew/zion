@@ -8,6 +8,8 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     <constant name="struts.devMode" value="true" />
 
+    <constant name="struts.objectFactory" value="spring" />
+
     <package name="default" namespace="/" extends="struts-default">
 
         <!-- <default-action-ref name="index" /> -->
@@ -20,7 +22,7 @@
             <exception-mapping exception="java.lang.Exception" result="error"/>
         </global-exception-mappings>-->
 
-        <action name="checkLogin" class="com.zion.ssh.demo.CheckLoginAction">
+        <action name="checkLogin" class="checkLogin">
             <result name="success">/welcome.jsp</result>        
             <result name="error">/error.jsp</result>    
         </action>
