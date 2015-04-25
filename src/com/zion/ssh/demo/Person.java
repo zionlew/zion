@@ -9,6 +9,7 @@ package com.zion.ssh.demo;
 
 
 public class Person {
+    
     private int id;
     private String name;
     private int age;
@@ -36,6 +37,12 @@ public class Person {
     public void setBook(Book book) {
         System.out.println("Person中SetBook方法");
         this.book = book;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
     
 }
