@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <p>Servlet的使用</p>
-  <a href="servlet/servletDemo01">访问ServletDemo01</a>
+  <a href="servlet/servletDemo01?name=sa">访问ServletDemo01</a>
   
 </html>
 
