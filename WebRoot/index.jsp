@@ -7,6 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+  	<!-- 设定了basepath之后,下面的路径使用的相对路径就是绝对路径 -->
     <base href="<%=basePath%>">
     
     <title>My JSP 'index.jsp' starting page</title>
@@ -23,4 +24,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <a href="login.jsp">Login</a><br>
   </body>
+  
+  
+  <p>Servlet的使用</p>
+  <a href="servlet/servletDemo01">访问ServletDemo01</a>
+  
 </html>
+

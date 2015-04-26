@@ -9,7 +9,10 @@
     <constant name="struts.devMode" value="true" />
 
     <constant name="struts.objectFactory" value="spring" />
-
+    
+    <!-- 下面的路径不被Struts2过滤,多个路径用逗号分隔 -->
+	<constant name="struts.action.excludePattern" value="/servlet/.*"/>
+	
     <package name="default" namespace="/" extends="struts-default">
 
         <!-- <default-action-ref name="index" /> -->

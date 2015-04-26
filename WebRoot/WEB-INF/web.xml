@@ -12,7 +12,32 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-
+	
+	<!-- Servelt 配置 -->
+	<!-- Servlet的使用方法 -->
+	<servlet>
+		<servlet-name>servletDemo01</servlet-name>
+		<servlet-class>com.zion.servlet.demo.ServletDemo01</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>servletDemo01</servlet-name>
+		<url-pattern>/servlet/servletDemo01</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 配置一个过滤器过滤掉Struts2的过滤器
+		有两种方法,一种是写一个过滤器,继承StrutsPrepareAndExecuteFilter
+		另一种是修改Struts2的xml文件,添加
+		<constant name="struts.action.excludePattern" value="/servlet/.*"/>语句
+	<filter>
+		<filter-name>filterStruts2</filter-name>
+		<filter-class>com.zion.servlet.demo.SkipStruts2Filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>filterStruts2</filter-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</filter-mapping>
+ 	-->
+ 	
 	<!-- 添加Struts2的Filter文件 -->
 	<filter>
 		<filter-name>struts2</filter-name>
