@@ -13,7 +13,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestBookDao {
 
-    @Test
     public void testAdd() {
 
         ApplicationContext context = new ClassPathXmlApplicationContext(
@@ -24,6 +23,21 @@ public class TestBookDao {
         book.setPrice(20l);
         System.out.println("dao:" + dao);
         dao.add(book);
+
+    }
+    
+    @Test
+    public void testAdd2() {
+        
+        //不写Service,直接获得BookDao资源
+        ApplicationContext context = new ClassPathXmlApplicationContext(
+                new String[] { "applicationContext.xml" });
+        BookDaoImpl dao = context.getBean("book",BookDaoImpl.class);
+        Book book = new Book();
+        book.setName("java");
+        book.setPrice(20l);
+        System.out.println("dao:" + dao);
+        dao.save(book);
 
     }
 }

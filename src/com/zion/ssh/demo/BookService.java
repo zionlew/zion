@@ -31,9 +31,7 @@ public class BookService {
     public void setBookDao( BookDao bookDao) {
         this.bookDao = bookDao;
     }
-    
-
-    
+  
     public void destroy() {
         System.out.println("destroy");
     }
