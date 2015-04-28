@@ -13,11 +13,22 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 	
+	<context-param>
+		<description>通过getServletContext().getInitParameter("XX")读取参数</description>
+		<param-name>character</param-name>
+		<param-value>utf-8</param-value>
+	</context-param>
+	
 	<!-- Servelt 配置 -->
 	<!-- Servlet的使用方法 -->
 	<servlet>
 		<servlet-name>servletDemo01</servlet-name>
 		<servlet-class>com.zion.servlet.demo.ServletDemo01</servlet-class>
+		<init-param>
+			<description>通过getServletConfig().getInitParameter("XX")读取参数</description>
+			<param-name>name</param-name>
+			<param-value>zion</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>servletDemo01</servlet-name>
