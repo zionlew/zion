@@ -8,3 +8,8 @@
 项目说明:
 http://www.cnblogs.com/zionlew/
     
+1.子类是否可以重写父类的方法
+测试例子:(可以)
+	com.zion.test.p01
+		FatherClass01
+		ChildClass
