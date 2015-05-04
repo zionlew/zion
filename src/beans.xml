@@ -13,7 +13,17 @@
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- 通过构造方法加载属性 -->
+    <bean id="book" class="com.zion.spring.learn.Book">
+    	<property name="name" value="java"/>
+    </bean>    
+    
+    <bean id="user" class="com.zion.spring.learn.User">
+    	<constructor-arg ref="book"/>
+    </bean>    
+     
+    <!-- HelloWorld
 	<bean id="user" class="com.zion.spring.learn.User">
 		<property name="username" value="zion"></property>
-	</bean>
+	</bean> -->
 </beans>

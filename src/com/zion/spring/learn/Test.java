@@ -13,7 +13,7 @@ public class Test {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         User user = context.getBean("user",User.class);
-        System.out.println(user.getUsername());
+        System.out.println(user.printBook());
         context.close();
     }
 }
