@@ -12,12 +12,16 @@ public class User {
     private String username;
 
     
-    //在配置文件中给属性赋值,在这里不写Setter,Getter方法
     private Book book;
-    public User(Book book){
+      
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
         this.book = book;
     }
-    
+
     public String getUsername() {
         return username;
     }

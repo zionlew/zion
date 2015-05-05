@@ -13,7 +13,19 @@
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
-    <!-- 集合装配 -->    
+    
+    <!-- 自动装配 -->    
+    <bean name="book" class="com.zion.spring.learn.Book">
+    	<property name="name" value="java"/>
+    </bean>    
+    <bean name="b1" class="com.zion.spring.learn.Book">
+    	<property name="name" value="C++"></property>
+    </bean>     
+     
+    <bean name="user" class="com.zion.spring.learn.User" autowire="byName">
+    
+    </bean>
+    <!-- 集合装配     
     <bean name="userDao" class="com.zion.spring.learn.UserDao">
     	<property name="list">
     		<list>
@@ -21,7 +33,7 @@
     			<value>list2</value>
     		</list>
     	</property>
-    </bean>    
+    </bean>    -->
         
     <!-- Scope 属性范围  singleton 是默认的
     <bean name="book" class="com.zion.spring.learn.Book" scope="prototype">
