@@ -7,18 +7,24 @@
  +-----------------------------------------------------------*/
 package com.zion.spring.learn;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class User {
     
     private String username;
 
     
     private Book book;
-      
+    
+    
     public Book getBook() {
         return book;
     }
 
-    public void setBook(Book book) {
+    @Autowired
+    public void setBook(@Qualifier("book2") Book book) {
         this.book = book;
     }
 

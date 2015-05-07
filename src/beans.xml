@@ -14,7 +14,17 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
     
-    <!-- 自动装配 -->    
+    <!-- 使用注解进行自动匹配 -->
+    <context:annotation-config/>  
+    <bean name="book1" class="com.zion.spring.learn.Book">
+    	<property name="name" value="cobol"></property>
+    </bean>
+    <bean name="book2" class="com.zion.spring.learn.Book">
+    	<property name="name" value="cobol2"></property>
+    </bean>
+    <bean name="user" class="com.zion.spring.learn.User"/>
+        
+    <!-- 自动装配 
     <bean name="book" class="com.zion.spring.learn.Book">
     	<property name="name" value="java"/>
     </bean>    
@@ -24,7 +34,8 @@
      
     <bean name="user" class="com.zion.spring.learn.User" autowire="byName">
     
-    </bean>
+    </bean> -->   
+    
     <!-- 集合装配     
     <bean name="userDao" class="com.zion.spring.learn.UserDao">
     	<property name="list">

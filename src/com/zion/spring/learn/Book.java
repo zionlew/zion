@@ -9,7 +9,7 @@ package com.zion.spring.learn;
 
 public class Book {
     
-    private String name;
+    private String name = "Java";
 
     public String getName() {
         return name;
