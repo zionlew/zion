@@ -15,13 +15,17 @@
         http://www.springframework.org/schema/aop/spring-aop.xsd">
     
     <!-- 使用注解进行自动匹配 -->
-    <context:annotation-config/>  
+   	<context:component-scan base-package="com.zion.spring.learn" />
+    <context:annotation-config/>
+      
+    <!-- 
     <bean name="book1" class="com.zion.spring.learn.Book">
     	<property name="name" value="cobol"></property>
     </bean>
     <bean name="book2" class="com.zion.spring.learn.Book">
     	<property name="name" value="cobol2"></property>
-    </bean>
+    </bean> -->
+    
     <bean name="user" class="com.zion.spring.learn.User"/>
         
     <!-- 自动装配 

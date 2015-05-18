@@ -49,10 +49,10 @@
 	</bean>
 	<bean id="book" class="com.zion.ssh.demo.Book">
 		<property name="name" value="java" />
-	</bean>
+	</bean> -->
 	
 
-	
-	<bean name="checkLogin" class="com.zion.ssh.demo.CheckLoginAction" /> -->
+	<!-- 用户登录确认 -->
+	<bean name="checkLogin" class="com.zion.ssh.demo.CheckLoginAction" />
 
 </beans>

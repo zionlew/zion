@@ -7,6 +7,9 @@
  +-----------------------------------------------------------*/
 package com.zion.spring.learn;
 
+import org.springframework.stereotype.Component;
+
+@Component("book")
 public class Book {
     
     private String name = "Java";

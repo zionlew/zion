@@ -24,7 +24,7 @@ public class User {
     }
 
     @Autowired
-    public void setBook(@Qualifier("book2") Book book) {
+    public void setBook(@Qualifier("book") Book book) {
         this.book = book;
     }
 
